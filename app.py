@@ -13,6 +13,7 @@ from io import BytesIO
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*", "allow_headers": "*", "expose_headers": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['CORS_HEADERS'] = 'Access-Control-Allow-Origin'
 
 @app.route('/')
 def hello_world():  # put application's code here
