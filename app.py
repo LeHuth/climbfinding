@@ -11,9 +11,8 @@ from PIL import Image
 from io import BytesIO
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/api/*": {"origins": "*", "allow_headers": "*", "expose_headers": "*"}})
+cors = CORS(app, resources={r"/*": {"origins": "*", "allow_headers": "*", "expose_headers": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
-#cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/')
 def hello_world():  # put application's code here
